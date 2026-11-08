@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurora University - a demo university website built with HTML, CSS and JavaScript.">
+  <title>Campus Life | Aurora University</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>🎓 Admissions 2027 are open · Demo project (fictional university)</span><span id="today"></span></div></div>
+
+  <header id="header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="index.html" class="logo"><span class="crest">A</span><span>Aurora<small>University</small></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="campus.html" class="active">Campus Life</a></li>
+        <li><a href="placements.html">Placements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admissions.html#apply" class="nav-cta">Apply Now</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode" aria-label="Toggle theme">🌙</button>
+        <button id="menuBtn" class="icon-btn menu-btn" title="Menu" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="banner"><div class="container"><h1>Campus <span class="gold">Life</span></h1><p>Facilities, events and tools for every student.</p></div></section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="title reveal">World-class <span class="accent">facilities</span></h2>
+        <div class="tabs" id="facTabs"></div>
+        <div class="card fac-panel" id="facPanel"></div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2 class="title reveal">Events <span class="accent">Calendar</span></h2>
+        <div class="two-col top">
+          <div class="card reveal">
+            <div class="cal-head">
+              <button class="icon-btn" id="calPrev" aria-label="Previous month">‹</button>
+              <h3 id="calTitle"></h3>
+              <button class="icon-btn" id="calNext" aria-label="Next month">›</button>
+            </div>
+            <div class="cal-grid" id="calGrid"></div>
+            <div class="cal-detail" id="calDetail">Click a highlighted date to see the event.</div>
+          </div>
+          <div class="reveal">
+            <h3>📌 Coming up</h3>
+            <div id="upcoming"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <p class="kicker">Student tool</p>
+        <h2 class="title">SGPA <span class="accent">Calculator</span></h2>
+        <div class="card">
+          <p class="muted">Add your subjects, credits and grades to calculate your semester GPA.</p>
+          <div id="gpaRows"></div>
+          <div class="gpa-actions">
+            <button class="btn btn-outline" id="addSubject" type="button">+ Add subject</button>
+            <button class="btn btn-gold" id="calcGpa" type="button">Calculate SGPA</button>
+          </div>
+          <div class="gpa-out" id="gpaOut"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="crest">A</span><span>Aurora<small>University</small></span></a>
+        <p>Learn boldly. Build the future.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="campus.html">Campus Life</a></li>
+          <li><a href="placements.html">Placements</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📍 Aurora Campus, Knowledge Park, Ghaziabad</p>
+        <p>📞 1800-555-0199</p>
+        <p>✉️ admissions@aurora.demo</p>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> Aurora University · Mini Project by <b>ADITYA GUPTA</b> · HTML, CSS &amp; JavaScript · Educational use only</p>
+  </footer>
+
+  <button id="toTop" class="to-top" title="Back to top" aria-label="Back to top">↑</button>
+  <div id="toast" class="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

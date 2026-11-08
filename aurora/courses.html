@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurora University - a demo university website built with HTML, CSS and JavaScript.">
+  <title>Courses | Aurora University</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>🎓 Admissions 2027 are open · Demo project (fictional university)</span><span id="today"></span></div></div>
+
+  <header id="header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="index.html" class="logo"><span class="crest">A</span><span>Aurora<small>University</small></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html" class="active">Courses</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="campus.html">Campus Life</a></li>
+        <li><a href="placements.html">Placements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admissions.html#apply" class="nav-cta">Apply Now</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode" aria-label="Toggle theme">🌙</button>
+        <button id="menuBtn" class="icon-btn menu-btn" title="Menu" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="banner"><div class="container"><h1>Our <span class="gold">Courses</span></h1><p>Programs designed for tomorrow's careers.</p></div></section>
+
+    <section class="section">
+      <div class="container">
+        <div class="toolbar">
+          <input type="search" id="cSearch" placeholder="🔍 Search courses..." aria-label="Search courses">
+          <div class="filters" id="levelFilters">
+            <button class="chip-btn active" data-level="all">All</button>
+            <button class="chip-btn" data-level="ug">Undergraduate</button>
+            <button class="chip-btn" data-level="pg">Postgraduate</button>
+            <button class="chip-btn" data-level="diploma">Diploma</button>
+          </div>
+          <select id="cDept" aria-label="Department">
+            <option value="all">All departments</option>
+            <option value="engineering">Engineering</option>
+            <option value="computing">Computing</option>
+            <option value="management">Management</option>
+            <option value="design">Design</option>
+          </select>
+        </div>
+        <p class="muted" id="cCount"></p>
+        <div id="courseGrid" class="grid"></div>
+        <p id="cNone" class="center muted" hidden>No courses match your search 😕</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="quiz">
+      <div class="container narrow">
+        <p class="kicker">Course Finder</p>
+        <h2 class="title">Which course <span class="accent">suits you?</span></h2>
+        <div class="card" id="quizBox"></div>
+        <div id="quizResult" class="card result hidden"></div>
+      </div>
+    </section>
+
+    <div id="courseModal" class="modal hidden">
+      <div class="modal-card wide" id="courseModalBody"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="crest">A</span><span>Aurora<small>University</small></span></a>
+        <p>Learn boldly. Build the future.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="campus.html">Campus Life</a></li>
+          <li><a href="placements.html">Placements</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📍 Aurora Campus, Knowledge Park, Ghaziabad</p>
+        <p>📞 1800-555-0199</p>
+        <p>✉️ admissions@aurora.demo</p>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> Aurora University · Mini Project by <b>ADITYA GUPTA</b> · HTML, CSS &amp; JavaScript · Educational use only</p>
+  </footer>
+
+  <button id="toTop" class="to-top" title="Back to top" aria-label="Back to top">↑</button>
+  <div id="toast" class="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurora University - a demo university website built with HTML, CSS and JavaScript.">
+  <title>Admissions | Aurora University</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>🎓 Admissions 2027 are open · Demo project (fictional university)</span><span id="today"></span></div></div>
+
+  <header id="header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="index.html" class="logo"><span class="crest">A</span><span>Aurora<small>University</small></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="admissions.html" class="active">Admissions</a></li>
+        <li><a href="campus.html">Campus Life</a></li>
+        <li><a href="placements.html">Placements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admissions.html#apply" class="nav-cta">Apply Now</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode" aria-label="Toggle theme">🌙</button>
+        <button id="menuBtn" class="icon-btn menu-btn" title="Menu" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="banner"><div class="container"><h1><span class="gold">Admissions</span> 2027</h1><p>Check fees, find scholarships and apply online.</p></div></section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="title reveal">Admission <span class="accent">process</span></h2>
+        <div class="steps">
+          <div class="step reveal"><i>1</i><h3>Register</h3><p>Fill the online application form.</p></div>
+          <div class="step reveal"><i>2</i><h3>Entrance / Merit</h3><p>Admission by marks or entrance test.</p></div>
+          <div class="step reveal"><i>3</i><h3>Counselling</h3><p>Meet our team and choose your course.</p></div>
+          <div class="step reveal"><i>4</i><h3>Confirm Seat</h3><p>Pay the fee and join Aurora!</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container two-col top">
+        <div class="card reveal">
+          <h3>💸 Fee &amp; Scholarship Calculator</h3>
+          <label for="fcCourse">Course</label>
+          <select id="fcCourse"></select>
+          <label for="fcMarks">Your marks in last exam (%)</label>
+          <input type="number" id="fcMarks" min="0" max="100" placeholder="e.g. 88">
+          <label class="check"><input type="checkbox" id="fcGirl"> Girl student (+5% scholarship)</label>
+          <label class="check"><input type="checkbox" id="fcSports"> State-level sports achiever (+5%)</label>
+          <label class="check"><input type="checkbox" id="fcHostel"> I need hostel (+₹90,000 / year)</label>
+          <button class="btn btn-gold full" id="fcBtn" type="button">Calculate</button>
+          <div id="fcResult" class="fc-result"></div>
+        </div>
+
+        <div class="reveal">
+          <h3>🏅 Scholarship slabs</h3>
+          <div class="table-wrap">
+            <table>
+              <tr><th>Marks</th><th>Scholarship</th></tr>
+              <tr><td>95% and above</td><td class="best">50%</td></tr>
+              <tr><td>90% - 94.99%</td><td class="best">30%</td></tr>
+              <tr><td>85% - 89.99%</td><td class="best">20%</td></tr>
+              <tr><td>75% - 84.99%</td><td class="best">10%</td></tr>
+              <tr><td>Below 75%</td><td>No merit scholarship</td></tr>
+            </table>
+          </div>
+          <p class="muted">Scholarship applies to tuition fee only. Maximum combined scholarship is capped at 60%.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apply">
+      <div class="container narrow">
+        <p class="kicker">Apply online</p>
+        <h2 class="title">Application <span class="accent">Form</span></h2>
+        <form id="applyForm" class="card" novalidate>
+          <div class="row2">
+            <div>
+              <label for="aName">Full name</label>
+              <input type="text" id="aName" placeholder="As per certificates">
+              <small class="error" id="aNameE"></small>
+            </div>
+            <div>
+              <label for="aDob">Date of birth</label>
+              <input type="date" id="aDob">
+              <small class="error" id="aDobE"></small>
+            </div>
+          </div>
+          <div class="row2">
+            <div>
+              <label for="aEmail">Email</label>
+              <input type="email" id="aEmail" placeholder="you@example.com">
+              <small class="error" id="aEmailE"></small>
+            </div>
+            <div>
+              <label for="aPhone">Mobile number</label>
+              <input type="tel" id="aPhone" maxlength="10" placeholder="10-digit number">
+              <small class="error" id="aPhoneE"></small>
+            </div>
+          </div>
+          <div class="row2">
+            <div>
+              <label for="aCourse">Course applying for</label>
+              <select id="aCourse"></select>
+              <small class="error" id="aCourseE"></small>
+            </div>
+            <div>
+              <label for="aMarks">Marks in last exam (%)</label>
+              <input type="number" id="aMarks" min="0" max="100" placeholder="e.g. 82">
+              <small class="error" id="aMarksE"></small>
+            </div>
+          </div>
+          <label for="aWhy">Why do you want to join Aurora? <span class="muted" id="aCount">(0/250)</span></label>
+          <textarea id="aWhy" rows="4" maxlength="250" placeholder="Write a few lines about your goals..."></textarea>
+          <small class="error" id="aWhyE"></small>
+          <label class="check"><input type="checkbox" id="aTerms"> I confirm that the details above are correct</label>
+          <small class="error" id="aTermsE"></small>
+          <button type="submit" class="btn btn-gold full">Submit Application</button>
+        </form>
+      </div>
+    </section>
+
+    <div id="applyModal" class="modal hidden">
+      <div class="modal-card">
+        <div class="big">🎓</div>
+        <h2>Application Submitted!</h2>
+        <p id="applyMsg"></p>
+        <a href="index.html" class="btn btn-gold">Back to Home</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="crest">A</span><span>Aurora<small>University</small></span></a>
+        <p>Learn boldly. Build the future.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="campus.html">Campus Life</a></li>
+          <li><a href="placements.html">Placements</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📍 Aurora Campus, Knowledge Park, Ghaziabad</p>
+        <p>📞 1800-555-0199</p>
+        <p>✉️ admissions@aurora.demo</p>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> Aurora University · Mini Project by <b>ADITYA GUPTA</b> · HTML, CSS &amp; JavaScript · Educational use only</p>
+  </footer>
+
+  <button id="toTop" class="to-top" title="Back to top" aria-label="Back to top">↑</button>
+  <div id="toast" class="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

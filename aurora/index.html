@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurora University - a demo university website built with HTML, CSS and JavaScript.">
+  <title>Home | Aurora University</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>🎓 Admissions 2027 are open · Demo project (fictional university)</span><span id="today"></span></div></div>
+
+  <header id="header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="index.html" class="logo"><span class="crest">A</span><span>Aurora<small>University</small></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="campus.html">Campus Life</a></li>
+        <li><a href="placements.html">Placements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admissions.html#apply" class="nav-cta">Apply Now</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode" aria-label="Toggle theme">🌙</button>
+        <button id="menuBtn" class="icon-btn menu-btn" title="Menu" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="chip">🏆 Ranked among top private universities</span>
+          <h1>Shape your future at <span class="gold">Aurora</span>.</h1>
+          <p class="lead">Industry-ready programs, world-class faculty and a campus that never sleeps. Your journey starts here.</p>
+          <div class="btn-row">
+            <a href="admissions.html#apply" class="btn btn-gold">Apply Now</a>
+            <a href="courses.html" class="btn btn-ghost">Explore Courses</a>
+          </div>
+        </div>
+        <div class="countdown card-glass">
+          <p class="cd-title">⏳ Admissions close in</p>
+          <div class="cd-row" id="countdown">
+            <div><b id="cdD">00</b><span>Days</span></div>
+            <div><b id="cdH">00</b><span>Hours</span></div>
+            <div><b id="cdM">00</b><span>Mins</span></div>
+            <div><b id="cdS">00</b><span>Secs</span></div>
+          </div>
+          <p class="cd-note" id="cdNote"></p>
+          <a href="admissions.html#apply" class="btn btn-gold full">Register before the deadline</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Announcements"><div class="ticker-track" id="annTrack"></div></div>
+
+    <section class="section">
+      <div class="container">
+        <p class="kicker reveal">Popular programs</p>
+        <h2 class="title reveal">Find your <span class="accent">calling</span></h2>
+        <div id="featured" class="grid"></div>
+        <p class="center reveal"><a href="courses.html" class="btn btn-outline">View all courses →</a></p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container stats">
+        <div><h3><span class="counter" data-target="15">0</span>K+</h3><p>Students</p></div>
+        <div><h3><span class="counter" data-target="650">0</span>+</h3><p>Faculty</p></div>
+        <div><h3><span class="counter" data-target="48">0</span> LPA</h3><p>Highest package</p></div>
+        <div><h3><span class="counter" data-target="94">0</span>%</h3><p>Placement rate</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="kicker reveal">Why Aurora</p>
+        <h2 class="title reveal">A university that <span class="accent">cares</span></h2>
+        <div class="features">
+          <div class="feature reveal"><span>🔬</span><h3>Research First</h3><p>50+ labs and funded projects for undergraduates.</p></div>
+          <div class="feature reveal"><span>🤝</span><h3>Industry Links</h3><p>Internships and live projects with 250+ companies.</p></div>
+          <div class="feature reveal"><span>🌐</span><h3>Global Exposure</h3><p>Exchange programs across 20 partner universities.</p></div>
+          <div class="feature reveal"><span>💡</span><h3>Startup Incubator</h3><p>Seed funding and mentors for student founders.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container cta reveal">
+        <h2>Not sure which course fits you?</h2>
+        <p>Take our 1-minute quiz and get a personalised recommendation.</p>
+        <a href="courses.html#quiz" class="btn btn-gold">Take the Course Finder Quiz</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="crest">A</span><span>Aurora<small>University</small></span></a>
+        <p>Learn boldly. Build the future.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="campus.html">Campus Life</a></li>
+          <li><a href="placements.html">Placements</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📍 Aurora Campus, Knowledge Park, Ghaziabad</p>
+        <p>📞 1800-555-0199</p>
+        <p>✉️ admissions@aurora.demo</p>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> Aurora University · Mini Project by <b>ADITYA GUPTA</b> · HTML, CSS &amp; JavaScript · Educational use only</p>
+  </footer>
+
+  <button id="toTop" class="to-top" title="Back to top" aria-label="Back to top">↑</button>
+  <div id="toast" class="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

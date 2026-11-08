@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurora University - a demo university website built with HTML, CSS and JavaScript.">
+  <title>Contact | Aurora University</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>🎓 Admissions 2027 are open · Demo project (fictional university)</span><span id="today"></span></div></div>
+
+  <header id="header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="index.html" class="logo"><span class="crest">A</span><span>Aurora<small>University</small></span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="campus.html">Campus Life</a></li>
+        <li><a href="placements.html">Placements</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="admissions.html#apply" class="nav-cta">Apply Now</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode" aria-label="Toggle theme">🌙</button>
+        <button id="menuBtn" class="icon-btn menu-btn" title="Menu" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="banner"><div class="container"><h1>Contact <span class="gold">Us</span></h1><p>Questions about admissions or campus? Ask away.</p></div></section>
+
+    <section class="section">
+      <div class="container two-col top">
+        <form id="contactForm" class="card reveal" novalidate>
+          <h3>Send an enquiry</h3>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name">
+          <small class="error" id="nameError"></small>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com">
+          <small class="error" id="emailError"></small>
+          <label for="dept">Department</label>
+          <select id="dept"></select>
+          <small class="error" id="deptError"></small>
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="How can we help?"></textarea>
+          <small class="error" id="messageError"></small>
+          <button type="submit" class="btn btn-gold full">Send Enquiry</button>
+          <p id="formSuccess" class="success"></p>
+        </form>
+
+        <div class="reveal">
+          <h3>📞 Department directory</h3>
+          <input type="search" id="dirSearch" placeholder="🔍 Search department or person..." aria-label="Search directory">
+          <div id="dirList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container narrow">
+        <h2 class="title reveal">Frequently asked <span class="accent">questions</span></h2>
+        <div id="faqList"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="crest">A</span><span>Aurora<small>University</small></span></a>
+        <p>Learn boldly. Build the future.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="campus.html">Campus Life</a></li>
+          <li><a href="placements.html">Placements</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>📍 Aurora Campus, Knowledge Park, Ghaziabad</p>
+        <p>📞 1800-555-0199</p>
+        <p>✉️ admissions@aurora.demo</p>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> Aurora University · Mini Project by <b>ADITYA GUPTA</b> · HTML, CSS &amp; JavaScript · Educational use only</p>
+  </footer>
+
+  <button id="toTop" class="to-top" title="Back to top" aria-label="Back to top">↑</button>
+  <div id="toast" class="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
